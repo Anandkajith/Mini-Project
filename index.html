@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Price Prediction App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: grid;
+            grid-gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+      <div class="header">
+      <h1>Gold Price Prediction App</h1>
+    </header>
+  </div>
+    <main>
+        <form action="/predict" method="post">
+            <label for="SPX">SPX value:</label>
+            <input type="text" name="SPX" pattern="\d+(\.\d+)?" required title="Please enter a valid number">
+            
+            <label for="USO">USO value:</label>
+            <input type="text" name="USO" pattern="\d+(\.\d+)?" required title="Please enter a valid number">
+            
+            <label for="SLV">SLV value:</label>
+            <input type="text" name="SLV" pattern="\d+(\.\d+)?" required title="Please enter a valid number">
+            
+            <label for="EUR/USD">EUR/USD value:</label>
+            <input type="text" name="EUR/USD" pattern="\d+(\.\d+)?" required title="Please enter a valid number">
+            
+            <input type="submit" value="Predict">
+        </form>
+    </main>
+
+</body>
+</html>
